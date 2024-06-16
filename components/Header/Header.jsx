@@ -1,5 +1,6 @@
 // components/Header.js
 import { useRouter } from 'next/router';
+import styles from './header.module.scss';
 import Link from 'next/link';
 
 const Header = () => {
@@ -10,10 +11,9 @@ const Header = () => {
       <div className="flex items-center justify-between max-w-4xl mx-auto">
         <div>
           <Link href="/">
-            <p className="text-white text-xl font-bold">
-              daijiro-site-react-markdown
-            </p>
+            <p className="text-white text-xl font-bold">片山鍼灸院</p>
           </Link>
+          <p className={styles.hoge}>HOGEHOGE</p>
         </div>
         <nav>
           <ul className="flex space-x-4 text-white">

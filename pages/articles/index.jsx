@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
+import Layout from '../../components/Layout/Layout';
 import matter from 'gray-matter';
 
 const Articles = ({ articles }) => {
