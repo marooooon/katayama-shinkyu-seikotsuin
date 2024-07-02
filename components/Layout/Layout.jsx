@@ -1,5 +1,5 @@
 // components/Layout.js
-import Header from '../Header/Header';
+import Header from '../header/header';
 
 const Layout = ({ children }) => {
   return (

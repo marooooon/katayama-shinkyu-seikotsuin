@@ -1,22 +1,22 @@
 // components/Header.js
 import { useRouter } from 'next/router';
-import styles from './header.module.scss';
+import Styles from './header.module.scss';
 import Link from 'next/link';
 
 const Header = () => {
   const router = useRouter();
 
   return (
-    <header className="bg-gray-800 p-4">
-      <div className="flex items-center justify-between max-w-4xl mx-auto">
-        <div>
-          <Link href="/">
-            <p className="text-white text-xl font-bold">片山鍼灸院</p>
-          </Link>
-          <p className={styles.hoge}>HOGEHOGE</p>
-        </div>
+    <header className={Styles.header}>
+      <div className="hoge">
+        <Link href="/">
+          <p>片山鍼灸院</p>
+        </Link>
+        <p className={Styles.hoge}>HOGEHOGE</p>
+      </div>
+      <div>
         <nav>
-          <ul className="flex space-x-4 text-white">
+          <ul>
             <li>
               <Link href="/">
                 <p className={router.pathname === '/' ? 'font-bold' : ''}>
