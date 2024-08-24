@@ -1,3 +1,40 @@
-.header {
-  background-color: red;
+@import '../../styles/variable';
+
+.headerInner {
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 360px;
+}
+
+.headerLogo {
+  display: flex;
+  flex-direction: column;
+  font-size: $h1-font-size;
+  padding-top: 2rem;
+  margin-left: 3rem;
+  color: $primary-text-color;
+  span {
+    font-size: $font-size-base;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.headerNav {
+  background-color: $primary-color;
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.5rem 0;
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    li {
+      width: 200px;
+      a {
+        color: $white;
+        font-size: $font-size-large;
+      }
+    }
+  }
 }

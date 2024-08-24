@@ -1,0 +1,51 @@
+/* フォントサイズ */
+$base-font-size: 16px;
+$h1-font-size: 40px;
+$h2-font-size: 32px;
+$h3-font-size: 20px;
+$h4-font-size: 16px;
+$h5-font-size: 14px;
+$h6-font-size: 12px;
+
+$font-size-x-large: 24px;
+$font-size-large: 20px;
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-x-small: 12px;
+
+/* カラーパレット */
+$primary-color: #f90;
+$primary-bg-color: #fffcef;
+$primary-text-color: #775d35;
+$white: #fff;
+$black: #333;
+// $secondary-color: #2ecc71;
+// $accent-color: #e74c3c;
+// $black: #333333;
+// $dark-gray: #666666;
+// $gray: #999999;
+// $light-gray: #cccccc;
+// $white: #ffffff;
+// $link-color: #2980b9;
+// $link-hover-color: #1abc9c;
+// $error-color: #e74c3c;
+// $warning-color: #f1c40f;
+// $success-color: #2ecc71;
+
+/* スペーシング */
+$container-margin: 16px;
+$vertical-spacing: 24px;
+$container-padding: 16px;
+$button-padding: 12px 24px;
+
+/* ボーダー */
+$border-width: 1px;
+$border-color: #dddddd;
+$border-radius: 4px;
+
+/* シャドウ */
+$box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+/* フォントファミリー */
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monospace-font-family: 'Courier New', Courier, monospace;

@@ -1,19 +1,35 @@
 // pages/index.js
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import Layout from '../components/layout/layout';
 
-const Home = () => {
+const IndexPage = ({ articles }) => {
   return (
-    <Layout>
-      <div className="text-center">
-        <h1 className="text-3xl font-bold mb-4">
-          Welcome to daijiro-site-react-markdown
-        </h1>
-        <p className="text-lg">
-          This is the home page of daijiro-site-react-markdown.
-        </p>
-      </div>
+    <Layout articles={articles}>
+      <div>ここにその他のコンテンツを追加できます。</div>
     </Layout>
   );
 };
 
-export default Home;
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join('content', 'articles'));
+  const articles = files.map((filename) => {
+    const markdownWithMetadata = fs
+      .readFileSync(path.join('content', 'articles', filename))
+      .toString();
+    const { data: frontmatter } = matter(markdownWithMetadata);
+    return {
+      slug: filename.replace('.md', ''),
+      frontmatter,
+    };
+  });
+
+  return {
+    props: {
+      articles,
+    },
+  };
+}
+
+export default IndexPage;

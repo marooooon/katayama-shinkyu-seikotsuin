@@ -1,0 +1,11 @@
+@import '../../styles/variable';
+
+.heading2 {
+  position: relative;
+  margin: 4rem auto 2rem;
+  color: $primary-color;
+  font-weight: bold;
+  background-color: $white;
+  padding: 2rem 0;
+  text-align: center;
+}

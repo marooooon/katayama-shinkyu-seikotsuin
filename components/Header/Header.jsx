@@ -8,42 +8,24 @@ const Header = () => {
 
   return (
     <header className={Styles.header}>
-      <div className="hoge">
-        <Link href="/">
-          <p>片山鍼灸院</p>
+      <div className={Styles.headerInner}>
+        <Link href="/" className={Styles.headerLogo}>
+          <span>訪問鍼灸マッサージ</span>
+          片山鍼灸接骨院
         </Link>
-        <p className={Styles.hoge}>HOGEHOGE</p>
       </div>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">
-                <p className={router.pathname === '/' ? 'font-bold' : ''}>
-                  Home
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <p className={router.pathname === '/about' ? 'font-bold' : ''}>
-                  About
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/articles">
-                <div
-                  className={
-                    router.pathname.startsWith('/articles') ? 'font-bold' : ''
-                  }
-                >
-                  Articles
-                </div>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      <div className={Styles.headerNav}>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/articles">Articles</Link>
+          </li>
+        </ul>
       </div>
     </header>
   );
