@@ -10,7 +10,7 @@
   "prettier.printWidth": 80,
   // ファイルの保存時に修正を適用するための設定
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   // ESLintなどの設定
   "eslint.format.enable": true,
