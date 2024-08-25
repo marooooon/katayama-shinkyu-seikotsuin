@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: process.env.BASE_PATH || '',
-  assetPrefix: process.env.BASE_PATH || '',
+  basePath: '/katayama-shinkyu-seikotsuin',
+  assetPrefix: '/katayama-shinkyu-seikotsuin/',
 };
 
 export default nextConfig;
