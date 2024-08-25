@@ -1,4 +1,18 @@
 {
+  // ファイルを保存するたびに自動で整形を行う
   "editor.formatOnSave": true,
-  "files.autoSave": "onWindowChange"
+  // 保存時にコードを整形するためのフォーマッターを指定する
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // フォーマッタ設定のオプション（Prettierの例）
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 80,
+  // ファイルの保存時に修正を適用するための設定
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // ESLintなどの設定
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true
 }

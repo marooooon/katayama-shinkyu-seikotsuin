@@ -1,0 +1,56 @@
+@import '../styles/variable';
+@import '../styles//mixin';
+
+.articlesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  border-radius: 4px;
+  @include breakpoint {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  li {
+    position: relative;
+    background-color: #ffeacb;
+  }
+}
+
+.articlesListHead {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: $primary-color;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  h3 {
+    font-weight: bold;
+    font-size: $font-size-base;
+    color: $white;
+  }
+}
+
+.articlesListThumbnail {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.articlesListThumbnailElectricalTherapy {
+  background-image: url('/images/hontai.jpg');
+}
+
+.articlesListInner {
+  padding: 1rem;
+  //   background-color: $primary-color;
+  //   color: $white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  p {
+    font-size: $font-size-small;
+    color: $primary-color;
+    font-weight: bold;
+  }
+}

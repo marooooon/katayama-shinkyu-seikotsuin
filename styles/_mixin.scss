@@ -1,0 +1,20 @@
+// mixin.scss
+// ブレイクポイントの定義
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1440px,
+);
+
+// ミックスイン: ブレイクポイント用、デフォルト値を設定
+@mixin breakpoint($name: 'medium') {
+  $value: map-get($breakpoints, $name);
+  @if $value != null {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$name} does not exist in the $breakpoints map.";
+  }
+}
