@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig = {
-  basePath: isProd ? '/katayama-shinkyu-seikotsuin' : '',
-  assetPrefix: isProd ? '/katayama-shinkyu-seikotsuin/' : '',
+  basePath: process.env.BASE_PATH || '',
+  assetPrefix: process.env.BASE_PATH || '',
 };
 
 export default nextConfig;
