@@ -1,5 +1,9 @@
 @import 'variable';
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* グローバルスタイル */
 body {
   font-family: $base-font-family;

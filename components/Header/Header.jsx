@@ -17,22 +17,22 @@ const Header = () => {
       <div className={Styles.headerNav}>
         <ul>
           <li>
-            <Link href="/">施術内容</Link>
+            <Link href="/">ホーム</Link>
           </li>
           <li>
-            <Link href="/">施術内容</Link>
+            <Link href="#treatment-contents">施術内容</Link>
           </li>
           <li>
-            <Link href="/">施術の様子</Link>
+            <Link href="#treatment-scenes">施術の様子</Link>
           </li>
           <li>
-            <Link href="/">ご利用の流れ</Link>
+            <Link href="#usage-flow">ご利用の流れ</Link>
           </li>
           <li>
-            <Link href="/">代表挨拶</Link>
+            <Link href="#greetings">代表挨拶</Link>
           </li>
           <li>
-            <Link href="/">ブログ</Link>
+            <Link href="#blog">ブログ</Link>
           </li>
         </ul>
       </div>
