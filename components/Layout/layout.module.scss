@@ -1,7 +1,12 @@
 @import '../../styles/variable';
+@import '../../styles/mixin';
 
 .layoutWrapper {
   max-width: 1200px;
   margin: 0 auto;
   width: 85%;
+  @include breakpoint {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

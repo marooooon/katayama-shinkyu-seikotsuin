@@ -4,12 +4,13 @@
 .articlesList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  gap: 40px;
   border-radius: 4px;
   @include breakpoint {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   li {
+    border-radius: 8px;
     position: relative;
     background-color: #ffeacb;
   }
@@ -39,7 +40,8 @@
 }
 
 .articlesListThumbnailElectricalTherapy {
-  background-image: url('/images/hontai.jpg');
+  background-image: url('/images/sample.jpg');
+  background-size: cover;
 }
 
 .articlesListInner {
@@ -53,4 +55,86 @@
     color: $primary-color;
     font-weight: bold;
   }
+}
+
+.gridTwoColumn {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  margin: 0 auto;
+  @include breakpoint {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+  }
+}
+
+.gridTwoColumnImage {
+  width: 100%;
+  border-radius: 4px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  @include breakpoint {
+    background-position: center 15%;
+  }
+}
+
+.gridTwoColumnImage.treatment {
+  background-size: cover;
+  height: 100%;
+  background-image: url('/images/sample.jpg');
+}
+
+.gridTwoColumnImage.ceo {
+  background-size: cover;
+  height: 100%;
+  background-image: url('/images/katayama.jpg');
+}
+
+.gridTwoColumnTitle {
+  font-weight: bold;
+  font-size: $font-size-large;
+  color: $primary-color;
+  margin-top: 48px;
+  margin-bottom: 14px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.messageCeoText {
+  margin-top: 1.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.usageStepList {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto 0;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 2px solid $primary-color;
+  padding: 2rem 2rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.usageStepTitle {
+  font-size: x-large;
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+.usageStepNumber {
+  position: absolute;
+  top: -1em;
+  left: 1rem;
+  background-color: $primary-color;
+  color: #fff;
+  font-weight: bold;
+  padding: 7px 10px;
+  border-radius: 4px;
 }

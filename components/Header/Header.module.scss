@@ -1,18 +1,49 @@
 @import '../../styles/variable';
+@import '../../styles/mixin';
 
 .headerInner {
+  position: relative;
   background-image: url('/images/bg.jpg');
-  background-size: cover;
   background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 55% auto;
   height: 360px;
+  @include breakpoint('large') {
+    background-size: 70% auto;
+  }
+  @include breakpoint {
+    background-size: cover;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0) 45%,
+      rgba(255, 255, 255, 1) 75%
+    );
+    @include breakpoint {
+      width: 100%;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+  }
 }
 
 .headerLogo {
+  position: absolute;
+  left: 5%;
+  top: 50px;
   display: flex;
   flex-direction: column;
   font-size: $h1-font-size;
-  padding-top: 2rem;
-  margin-left: 3rem;
   color: $primary-text-color;
   span {
     font-size: $font-size-base;
