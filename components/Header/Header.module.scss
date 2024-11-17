@@ -45,6 +45,15 @@
   flex-direction: column;
   font-size: $h1-font-size;
   color: $primary-text-color;
+  font-weight: bold;
+
+  // 以下は一時的にホバーイベントを消してます
+  pointer-events: none;
+  &:hover {
+    opacity: 1;
+  }
+  // 以上は一時的にホバーイベントを消してます
+
   span {
     font-size: $font-size-base;
     padding-bottom: 0.5rem;
@@ -53,6 +62,9 @@
 
 .headerNav {
   background-color: $primary-color;
+  @include breakpoint {
+    display: none;
+  }
   ul {
     display: flex;
     justify-content: space-between;

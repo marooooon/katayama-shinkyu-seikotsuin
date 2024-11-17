@@ -32,7 +32,7 @@ const IndexPage = ({ articles }) => {
           <H2 text={'施術内容'} />
           <ul className={Styles.articlesList}>
             <li id="electrical-therapy">
-              <Link href="">
+              <Link href="" style={{ pointerEvents: 'none' }}>
                 <div className={Styles.articlesListHead}>
                   <h3>電気治療</h3>
                 </div>
@@ -45,7 +45,7 @@ const IndexPage = ({ articles }) => {
               </Link>
             </li>
             <li id="ultrasound-therapy">
-              <Link href="">
+              <Link href="" style={{ pointerEvents: 'none' }}>
                 <div className={Styles.articlesListHead}>
                   <h3>超音波治療</h3>
                 </div>
@@ -58,7 +58,7 @@ const IndexPage = ({ articles }) => {
               </Link>
             </li>
             <li id="roller-acupuncture">
-              <Link href="">
+              <Link href="" style={{ pointerEvents: 'none' }}>
                 <div className={Styles.articlesListHead}>
                   <h3>ローラー鍼（保険内）</h3>
                 </div>
@@ -73,7 +73,7 @@ const IndexPage = ({ articles }) => {
               </Link>
             </li>
             <li id="electronic-moxibustion">
-              <Link href="">
+              <Link href="" style={{ pointerEvents: 'none' }}>
                 <div className={Styles.articlesListHead}>
                   <h3>電子温灸器（保険内）</h3>
                 </div>
@@ -86,7 +86,7 @@ const IndexPage = ({ articles }) => {
               </Link>
             </li>
             <li id="exercise-therapy">
-              <Link href="">
+              <Link href="" style={{ pointerEvents: 'none' }}>
                 <div className={Styles.articlesListHead}>
                   <h3>運動療法</h3>
                 </div>
@@ -99,7 +99,7 @@ const IndexPage = ({ articles }) => {
               </Link>
             </li>
             <li id="massage">
-              <Link href="">
+              <Link href="" style={{ pointerEvents: 'none' }}>
                 <div className={Styles.articlesListHead}>
                   <h3>マッサージ</h3>
                 </div>
@@ -207,17 +207,38 @@ const IndexPage = ({ articles }) => {
         </section>
         <section id="blog">
           <H2 text={'ブログ'} />
-          <ul>
+          <ul className={Styles.articlesList}>
             {articles.map((article, index) => (
               <li key={index}>
                 <Link href={`/articles/${article.slug}`}>
-                  <p>{article.frontmatter.title}</p>
+                  <div className={Styles.articlesListHead}>
+                    <h3>{article.frontmatter.tags}</h3>
+                  </div>
+                  <img
+                    src={article.frontmatter.image}
+                    alt={article.frontmatter.alt}
+                    style={{ display: 'none' }}
+                  />
+                  <div
+                    style={{
+                      backgroundImage: `url(${
+                        article.frontmatter.image || '/images/noimage.png'
+                      })`,
+                    }}
+                    className={Styles.articlesListThumbnail}
+                  ></div>
+                  <div className={Styles.articlesListInner}>
+                    <p>{article.frontmatter.title}</p>
+                  </div>
                 </Link>
               </li>
             ))}
           </ul>
         </section>
       </Layout>
+      <footer id="footer" className={Styles.footer}>
+        <p>&copy; 2024 片山鍼灸接骨院. All rights reserved.</p>
+      </footer>
     </>
   );
 };
