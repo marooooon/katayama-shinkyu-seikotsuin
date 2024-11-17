@@ -9,10 +9,7 @@ const nextConfig = {
     includePaths: [path.resolve(__dirname, 'styles')],
   },
   output: 'export', // 静的エクスポート用の設定
-  assetPrefix:
-    process.env.NODE_ENV === 'production'
-      ? '/katayama-shinkyu-seikotsuin/'
-      : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
   images: {
     unoptimized: true,
   },
