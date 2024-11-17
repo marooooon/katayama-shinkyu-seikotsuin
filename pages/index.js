@@ -120,6 +120,8 @@ const IndexPage = ({ articles }) => {
             <Image
               src="/images/sample.jpg"
               alt="施術の様子"
+              width="200"
+              height="200"
               style={{ display: 'none' }}
             />
             <div
@@ -182,6 +184,8 @@ const IndexPage = ({ articles }) => {
             <Image
               src="/images/katayama.jpg"
               alt="施術の様子"
+              width="200"
+              height="200"
               style={{ display: 'none' }}
             />
             <div className={`${Styles.gridTwoColumnImage} ${Styles.ceo}`} />
@@ -218,6 +222,8 @@ const IndexPage = ({ articles }) => {
                   <Image
                     src={article.frontmatter.image}
                     alt={article.frontmatter.alt}
+                    width="200"
+                    height="200"
                     style={{ display: 'none' }}
                   />
                   <div
