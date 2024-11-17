@@ -1,5 +1,5 @@
 // pages/about.js
-import Layout from '../components/layout/layout';
+import Layout from '../components/Layout/Layout.jsx';
 
 const About = () => {
   return (
