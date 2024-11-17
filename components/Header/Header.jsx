@@ -1,6 +1,6 @@
 // components/Header.js
 import { useRouter } from 'next/router';
-import Styles from './header.module.scss';
+import Styles from './Header.module.scss';
 import Link from 'next/link';
 
 const Header = () => {
