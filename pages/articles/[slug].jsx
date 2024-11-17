@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
-import Layout from '../../components/Layout/Layout.jsx';
+import Layout from '../../components/layout/Layout';
 import Image from 'next/image';
 
 const Article = ({ frontmatter, content }) => {
