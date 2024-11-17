@@ -1,8 +1,8 @@
-$env: 'development'; // デフォルト値
+// 本番にデプロイするときは $env: 'production';
+$env: 'production';
 
-@if env(BASE_PATH) == 'production' {
-  $env: 'production';
-}
+// ローカル環境で作業するときは $env: 'development';
+// $env: 'development';
 
 $imagePath: '';
 
