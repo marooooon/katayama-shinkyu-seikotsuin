@@ -7,6 +7,7 @@ import Layout from '../components/layout/layout';
 import Link from 'next/link';
 import Styles from './top.module.scss';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const IndexPage = ({ articles }) => {
   return (
@@ -116,7 +117,7 @@ const IndexPage = ({ articles }) => {
         <section id="treatment-scenes">
           <H2 text={'施術の様子'} />
           <div className={Styles.gridTwoColumn}>
-            <img
+            <Image
               src="/images/sample.jpg"
               alt="施術の様子"
               style={{ display: 'none' }}
@@ -178,7 +179,7 @@ const IndexPage = ({ articles }) => {
         <section id="greetings">
           <H2 text={'代表挨拶'} />
           <div className={Styles.gridTwoColumn}>
-            <img
+            <Image
               src="/images/katayama.jpg"
               alt="施術の様子"
               style={{ display: 'none' }}
@@ -214,7 +215,7 @@ const IndexPage = ({ articles }) => {
                   <div className={Styles.articlesListHead}>
                     <h3>{article.frontmatter.tags}</h3>
                   </div>
-                  <img
+                  <Image
                     src={article.frontmatter.image}
                     alt={article.frontmatter.alt}
                     style={{ display: 'none' }}
