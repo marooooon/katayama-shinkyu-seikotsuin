@@ -1,3 +1,17 @@
+$env: 'development'; // デフォルト値
+
+@if env(BASE_PATH) == 'production' {
+  $env: 'production';
+}
+
+$imagePath: '';
+
+@if $env == 'production' {
+  $imagePath: '/katayama-shinkyu-seikotsuin/';
+} @else {
+  $imagePath: '';
+}
+
 /* フォントサイズ */
 $base-font-size: 16px;
 $h1-font-size: 40px;

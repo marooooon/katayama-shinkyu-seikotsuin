@@ -3,7 +3,7 @@
 
 .headerInner {
   position: relative;
-  background-image: url('/images/bg.jpg');
+  background-image: url('#{$imagePath}/images/bg.jpg');
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 55% auto;

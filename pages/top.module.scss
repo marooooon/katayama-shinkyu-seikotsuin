@@ -43,7 +43,7 @@
 }
 
 .articlesListThumbnailElectricalTherapy {
-  background-image: url('/images/sample.jpg');
+  background-image: url('#{$imagePath}/images/sample.jpg');
   background-size: cover;
 }
 
@@ -84,13 +84,13 @@
 .gridTwoColumnImage.treatment {
   background-size: cover;
   height: 100%;
-  background-image: url('/images/sample.jpg');
+  background-image: url('#{$imagePath}/images/sample.jpg');
 }
 
 .gridTwoColumnImage.ceo {
   background-size: cover;
   height: 100%;
-  background-image: url('/images/katayama.jpg');
+  background-image: url('#{$imagePath}/images/katayama.jpg');
 }
 
 .gridTwoColumnTitle {
