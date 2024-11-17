@@ -1,5 +1,5 @@
 // components/Layout.js
-import Header from '../header/header';
+import Header from '../Header/Header';
 import Styles from './layout.module.scss';
 // import Link from 'next/link';
 
