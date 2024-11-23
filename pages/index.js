@@ -1,4 +1,5 @@
 // pages/index.js
+import { useEffect, useState } from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -229,9 +230,9 @@ const IndexPage = ({ articles }) => {
                   <div
                     style={{
                       backgroundImage: `url(${
-                        article.frontmatter.image
-                          ? article.frontmatter.image
-                          : `/katayama-shinkyu-seikotsuin${article.frontmatter.image}`
+                        article.frontmatter.imageDevelop
+                          ? article.frontmatter.imageDevelop
+                          : article.frontmatter.imageProduction
                       })`,
                     }}
                     className={Styles.articlesListThumbnail}

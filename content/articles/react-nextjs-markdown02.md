@@ -3,7 +3,8 @@ title: 'Next.jsでブログを作る方法'
 date: '2024-03-25'
 author: 'Daijiro Takeuchi'
 tags: ['Next.js']
-image: '/images/katayama.jpg'
+# imageDevelop: '/images/katayama.jpg'
+imageProduction: '/katayama-shinkyu-seikotsuin/images/katayama.jpg'
 alt: 'hogehoge'
 ---
 

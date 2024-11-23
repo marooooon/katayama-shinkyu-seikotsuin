@@ -3,7 +3,8 @@ title: '記事作成例'
 date: '2024-03-25'
 author: 'John Doe'
 tags: ['サンプル']
-image: '/images/katayama.jpg'
+# imageDevelop: '/images/katayama.jpg'
+imageProduction: '/katayama-shinkyu-seikotsuin/images/katayama.jpg'
 alt: 'hogehoge'
 ---
 
