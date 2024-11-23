@@ -229,7 +229,9 @@ const IndexPage = ({ articles }) => {
                   <div
                     style={{
                       backgroundImage: `url(${
-                        article.frontmatter.image || '/images/noimage.png'
+                        article.frontmatter.image
+                          ? article.frontmatter.image
+                          : `/katayama-shinkyu-seikotsuin${article.frontmatter.image}`
                       })`,
                     }}
                     className={Styles.articlesListThumbnail}

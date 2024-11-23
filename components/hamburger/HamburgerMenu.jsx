@@ -1,12 +1,8 @@
-// components/Header.js
 import { useState } from 'react';
-import { useRouter } from 'next/router';
-import Styles from './Header.module.scss';
+import styles from './HamburgerMenu.module.scss';
 import Link from 'next/link';
-import HamburgerMenu from '../hamburger/HamburgerMenu';
 
-const Header = () => {
-  const router = useRouter();
+export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -14,19 +10,22 @@ const Header = () => {
   };
 
   return (
-    <header className={Styles.header}>
-      <HamburgerMenu />
-      <div className={Styles.headerInner}>
-        <Link href="/" className={Styles.headerLogo}>
-          <span>訪問鍼灸マッサージ</span>
-          片山鍼灸接骨院
-        </Link>
-        <div className={Styles.hamburger}></div>
+    <div className={styles.container}>
+      {/* ハンバーガーボタン */}
+      <div
+        className={`${styles.hamburger} ${isOpen ? styles.active : ''}`}
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div className={Styles.headerNav}>
+
+      {/* メニュー */}
+      <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
         <ul>
           <li>
-            <Link href="/">ホーム</Link>
+            <Link href="">Home</Link>
           </li>
           <li>
             <Link href="#treatment-contents">施術内容</Link>
@@ -45,8 +44,9 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </header>
-  );
-};
 
-export default Header;
+      {/* 背景の暗い部分 */}
+      {isOpen && <div className={styles.overlay} onClick={toggleMenu}></div>}
+    </div>
+  );
+}
