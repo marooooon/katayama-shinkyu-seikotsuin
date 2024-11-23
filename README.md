@@ -18,6 +18,10 @@ v20.3.1
 - 本番にデプロイするときは `$env: 'production';`
 - ローカル環境で作業するときは `$env: 'development';`
 
+# Github Pages
+
+https://marooooon.github.io/katayama-shinkyu-seikotsuin/
+
 # 参考サイト
 
 https://iris-corp.net/guide
